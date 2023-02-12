@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+}
+#map{
+    height: 15cm;
+    margin-top: 2.3cm;
+    z-index: 0;
+}
+map{
+    width: 100%; 
+    overflow: hidden;
+    height: auto;
+}
+
+.next {
+    height: 2cm;
+    width: 100%;
+    margin-bottom: -10px;
+    background-color: black;
+    position: fixed;
+    top: 10px;
+    right: 7px;
+    left: 7px;
+    z-index: 1;
+}
+
+img{
+    height: 50%;
+    width: 100%;
+    float: left;
+    margin-top: 15%;
+}
+.floater{
+    height: 70%;
+    width: 50%;
+}
+.map{
+    background-color: green;
+    width: 100%;
+}
+.img{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+span{
+    font-size: 40px;
+    font-family: cursive;
+    color: white;
+    margin-left: 5px;
+    letter-spacing: 5px;
+    line-height: 90%;
+}
+.all{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 20px;
+    margin-top: 0px;
+    float: right;
+}
+.bottle{
+    display: none;
+    width: 20%;
+    height: 15%;
+    box-shadow: 5px 5px;
+    position: absolute;
+    top: 10%;
+    z-index: 5;
+    right: 3%;
+    color: black;
+    border-radius: 2px;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    text-align: center;
+}
+.vision{
+   width: inherit;
+   height: fit-content;
+   margin-bottom: 5px;
+  background-color: grey;
+}
+.vn{
+  width: fit-content;
+  height: fit-content;
+  margin-right: 4px;
+  border-radius: 2px;
+  margin-top: 10%;
+}
+.tnt{
+    position: absolute;
+    top: 95%;
+    height: 10%;
+    background-color: black;
+    width: 60%;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5px;
+}
+.lxt{
+    position: absolute;
+    height: 10%;
+    background-color: black;
+    width: 60%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    right: 7px;
+    top: 137%;
+    padding: 5px;
+}
+.down{
+    margin-bottom: 0;
+    height: 10%;
+    width: 150px;
+    position: absolute;
+    left: 45%;
+    top: 150%;
+    background-color: rgb(17, 10, 10);
+    border-radius: 7px;
+    padding: 15px;
+    text-align: center;
+}
+#text-tnt{
+    color: whitesmoke;
+    font-size: 30px;
+    font-family: cursive;
+}
+#popup{
+    height: 80%;
+    width: 80%;    
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    background-color: white;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+}
+#popup > div {
+    color: white;
+    width: 50%;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    height: auto;
+    background-color: white;
+  }
+#close{
+    margin-top: 0;
+    float: right;
+    height: 1cm;
+    width: 1cm;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Check</title>
+</head>
+<link rel="stylesheet" href="\test.css">
+<link rel="stylesheet" href="../style.css">
+<body>
+    <div class="next">
+        <img src="../assets\tetter.jpg" class ="img" > <br>
+        <span>rashIt here...</span>
+        <img class="all" src="assets/cardboard.jpg">
+            <img class="all" src="../assets\bottle.jpg" id="bottle">
+            <img class="all" src="../assets/tyre.jpg" alt="">
+            <img class="all" src="../assets\iron.jpg" alt="">
+            <img class="all" src="../assets\pot.jpg" alt="">
+            <img class="all" src="../assets\car.jpg" alt="">
+            <img class="all" src="../assets\cloth.jpg" alt="">
+            <img class="all" src="../assets\glasss.jpg" alt="">
+            <img class="all" src="../assets\allu.jpg" alt="">
+            <img class="all" src="../assets\battery.jpg" alt="">
+    
+    </div>
+    <header id="header_div">Do you wish to add a photo of yourself?</header>
+    <div id="info">* As much as we would like to provide to the public enough details about buyers, we are equally concerned about your privacy.
+        <br> if you would like to upload a photo, do, instead click next!
+    </div>
+    <form action="/sender" method="post" enctype="multipart/form-data" id="sender">
+        <label for="file" id="label">
+            <img src="../assets/default.jpg" alt="">
+        </label>
+        <input type="file" name="image">
+        <input type="submit" value="Upload Image" id="submit">
+           <div id="text"></div>
+      </form>
+      <button><a href="/newdata/form/">next________></a></button>
+    
+            <script> 
+            const form = document.getElementById('text');
+            form.style.fontFamily = 'cursive';
+             checker();
+            async function checker(){
+                const data = await fetch('/check');
+                const res = await data.json();
+               const valid = res.status
+               console.log(valid)
+               if (valid == 'true') {
+                form.textContent = '1 Image File Recieved. Click next to get further details'
+                form.style.color = 'green';
+               } else {
+                form.textContent = '0 Image File Sent. Click next if you do not want to add an image file.'
+               }
+            }
+            </script>
+</body>
+</html>
