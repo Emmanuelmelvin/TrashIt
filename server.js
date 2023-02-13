@@ -5,7 +5,8 @@ const multer = require('multer');
 const app = express();
 require('dotenv').config();
 app.use(express.json( {limit : '10mb'}));
-app.listen(3000 , () => console.log('Listening at 3000'));
+const port = process.env.PORT || 3000
+app.listen(port , () => console.log('Listening at 3000'));
 app.use(express.static('public'));
 const database = new Datastore('database.db')
 database.loadDatabase();
